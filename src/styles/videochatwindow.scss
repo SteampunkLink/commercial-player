@@ -1,0 +1,30 @@
+.video-chat-window {
+  background: white;
+  font-family: "Chicago";
+  margin: 5px;
+  width: 43%;
+  .video-chat-bar {
+    background: url("./assets/img/window-bar.jpg");
+    display: flex;
+    flex-direction: row;
+    height: 39px;
+    justify-content: center;
+    p {
+      background-color: #efeaee;
+      display: block;
+      height: 26px;
+      margin: 5px;
+    }
+  }
+  .video-area {
+    background: url("./assets/img/anon.png");
+    background-size: cover;
+    height: 165px;
+    width: 100%;
+  }
+  .video-footer {
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 21px;
+  }
+}

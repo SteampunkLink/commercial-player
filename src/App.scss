@@ -1,7 +1,10 @@
 @import "./styles/reset.scss";
+@import "./styles/fonts.scss";
+@import "./styles/navbar.scss";
+@import "./styles/videochatwindow.scss";
 
 .desktop {
-  background-image: url("./img/test-bg.jpg");
+  background-image: url("./assets/img/mac-bg-tile.jpg");
   background-repeat: repeat;
   height: 100vh;
   width: 100vw;
@@ -9,4 +12,24 @@
 
 h1 {
   color: black;
+  font-family: "Chicago", sans-serif;
+}
+
+.main-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.video-chat-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 43%;
+}
+
+.commercial-game-section {
+  border: 2px solid red;
+  width: 53%;
 }
