@@ -31,7 +31,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/,
-        type: "asset/resource"
+        type: "asset/resource",
+      },
+      {
+        test: /\.mp4$/,
+        use: "file-loader",
       }
     ],
   },

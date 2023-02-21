@@ -8,7 +8,7 @@ const Navbar = () => {
           <li>File</li>
           <li>Edit</li>
           <li>Label</li>
-          <li>Coffee</li>
+          <li>Flying Toasters</li>
           <li>Special</li>
           <li>Extra Special</li>
         </ul>
