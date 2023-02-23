@@ -2,6 +2,7 @@
 @import "./styles/fonts.scss";
 @import "./styles/navbar.scss";
 @import "./styles/videochatwindow.scss";
+@import "./styles/videoplayer.scss";
 
 .desktop {
   background-image: url("./assets/img/mac-bg-tile.jpg");
@@ -30,6 +31,13 @@ h1 {
 }
 
 .commercial-game-section {
-  border: 2px solid red;
   width: 53%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
 }

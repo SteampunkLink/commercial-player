@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 
 const VideoPlayer = ({ source }) => {
   const vidRef = useRef();
@@ -36,7 +36,7 @@ const VideoPlayer = ({ source }) => {
   };
 
   const increaseVol = () => {
-    let newVol;
+    let newVol = volume;
     if (volume < 10) {
       newVol = volume + 1;
     }
@@ -45,7 +45,7 @@ const VideoPlayer = ({ source }) => {
   };
 
   const decreaseVol = () => {
-    let newVol;
+    let newVol = volume;
     if (volume > 0) {
       newVol = volume - 1;
     }
@@ -55,22 +55,32 @@ const VideoPlayer = ({ source }) => {
 
   return (
     <div className="video-container">
-      <video src={source} ref={vidRef} onTimeUpdate={handleProgressBar} />
+      <video 
+        src={source} 
+        ref={vidRef} 
+        onTimeUpdate={handleProgressBar} 
+        onEnded={handleToggleVideo}
+      />
       <div className="video-controls">
-        <button onClick={handleToggleVideo}>{ isPlaying ? "Pause" : "Play" }</button>
-        <input
-          type="range"
-          className="progress"
-          min="0"
-          max="100"
-          step="0.1"
-          value={progress}
-          onChange={setProgressBar}
-        />
-        <span className="timestamp">{timeStamp}</span>
-        <button onClick={increaseVol}>Up</button>
-        <span className="volume">{volume}</span>
-        <button onClick={decreaseVol}>Dn</button>
+        <button className="play-pause" onClick={handleToggleVideo}>{ isPlaying ? (<p>&#10073;&#10073;</p>) : (<p>&#9654;</p>) }</button>
+        <div className="timeline-controls">
+          <input
+            type="range"
+            className="progress"
+            min="0"
+            max="100"
+            step="0.1"
+            value={progress}
+            onChange={setProgressBar}
+          />
+          <span className="timestamp">{timeStamp}</span>
+        </div>
+        <div className="volume-control">
+          <button onClick={increaseVol}><p>&#9650;</p></button>
+          <span className="volume">{volume}</span>
+          <button onClick={decreaseVol}><p>&#9660;</p></button>
+        </div>
+        
       </div>
     </div>
   )
